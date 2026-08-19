@@ -40,33 +40,72 @@
 	</header>
 	
 	<section id="lastest_news">
-		<div class="media_bar">
-			<i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
-			<i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
-			<i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
-		</div>
-	<!-- ------------------------------------------------------ -->
-	<!-- Slider main container -->
-	<div class="swiper" style="padding: 50px;">
-		<!-- Additional required wrapper -->
-		<div class="swiper-wrapper">
-		<!-- Slides -->
-		<div class="swiper-slide" style="background-image:url(img/mineatura\ 2.png);"></div>
-		<div class="swiper-slide" style="background-image:url(img/sayukiit_banner.png)" ></div>
-		<div class="swiper-slide" style="background-image:url(img/sayukiit_naracroft.png)" ></div>
-		</div>
-		<!-- If we need pagination -->
-		<div class="swiper-pagination"></div>
-	
-		<!-- If we need navigation buttons -->
-		<div class="swiper-button-prev"></div>
-		<div class="swiper-button-next"></div>
-	
-		<!-- If we need scrollbar -->
-		<div class="swiper-scrollbar"></div>
-	</div>
-	<!-- ---------------------------------------------------------- -->
-	</section>
+    <div class="media_bar">
+        <a href="https://instagram.com/TU_USUARIO" target="_blank"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+        <a href="https://youtube.com/@TU_CANAL" target="_blank"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
+        <a href="https://twitter.com/TU_USUARIO" target="_blank"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a>
+    </div>
+
+    <!-- Slider Swiper con enlaces -->
+    <div class="swiper" style="padding: 50px;">
+        <div class="swiper-wrapper">
+            <!-- Slide 1: Enlace a YouTube o Proyecto -->
+            <div class="swiper-slide">
+                <a href="https://youtube.com/@TU_CANAL" target="_blank" class="slide-link" style="background-image: url('img/mineatura 2.png');">
+                    <div class="slide-overlay">
+                        <span>Ver en YouTube <i class="fa-brands fa-youtube"></i></span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Slide 2: Enlace a Instagram / Portafolio -->
+            <div class="swiper-slide">
+                <a href="https://instagram.com/TU_USUARIO" target="_blank" class="slide-link" style="background-image: url('img/sayukiit_banner.png');">
+                    <div class="slide-overlay">
+                        <span>Visitar Instagram <i class="fa-brands fa-instagram"></i></span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Slide 3: Enlace a Twitter / X o Behance -->
+            <div class="swiper-slide">
+                <a href="https://twitter.com/TU_USUARIO" target="_blank" class="slide-link" style="background-image: url('img/sayukiit_naracroft.png');">
+                    <div class="slide-overlay">
+                        <span>Ver en Twitter <i class="fa-brands fa-twitter"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <!-- Banner Destacado de YouTube -->
+    <div class="yt-featured-banner">
+        <div class="yt-content">
+            <div class="yt-video-wrapper">
+                <!-- Reemplaza ID_DEL_VIDEO por el ID de tu video más reciente -->
+                <iframe 
+                    src="https://www.youtube.com/embed/ID_DEL_VIDEO" 
+                    title="Último Video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="yt-info">
+                <h2><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> Canal de YouTube</h2>
+                <p>¡Mira mi video más reciente, tutoriales de arte, procesos de ilustración y animación!</p>
+                <a href="https://youtube.com/@TU_CANAL?sub_confirmation=1" target="_blank" class="yt-subscribe-btn">
+                    Suscribirse al canal
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 	<section id="about_me">
 		<img src="img/sayukiit_icon.png" alt="">
 		<h1 style="color: aliceblue;">ABOUT ME</h1>
