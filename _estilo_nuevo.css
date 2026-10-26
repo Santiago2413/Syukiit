@@ -1,0 +1,390 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background: #000;
+}
+
+.clear {
+    clear: both;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+header {
+    height: 600px;
+    background-image: url("img/sayukiit_banner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: right;
+    position: relative;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 18px;
+    height: 72px;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.35);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none;
+}
+
+nav.scrolled {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.25);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+}
+
+.menu a {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0;
+    transition: 0.4s;
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+}
+
+.menu a:hover,
+.mos-menu:hover,
+.hide-menu:hover {
+    color: rgb(226, 162, 43);
+}
+
+.mos-menu,
+.hide-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#lastest_news {
+    background-image: url(img/Cola_fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    padding-bottom: 60px;
+}
+
+.swiper {
+    height: 600px;
+    padding: 50px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media_bar {
+    background-image: url(img/socialmedia_bar_inicio.png);
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.slide-overlay {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.slide-link:hover .slide-overlay {
+    opacity: 1;
+}
+
+.yt-featured-banner {
+    width: 85%;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+    background: rgba(15, 15, 15, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+}
+
+.yt-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.yt-video-wrapper {
+    flex: 1 1 450px;
+    position: relative;
+    padding-bottom: 28%;
+    height: 0;
+    min-height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.yt-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.yt-info {
+    flex: 1 1 300px;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+}
+
+.yt-info h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.yt-info p {
+    font-size: 15px;
+    color: #d1d1d1;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.yt-subscribe-btn {
+    display: inline-block;
+    background-color: #cc0000;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.yt-subscribe-btn:hover {
+    background-color: #ff0000;
+    transform: scale(1.04);
+}
+
+#about_me {
+    background-image: url(img/sayukiit_naracroft_banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 2%;
+    background-attachment: fixed;
+}
+
+.sobremi {
+    color: beige;
+    font-family: "Roboto", sans-serif;
+    line-height: 35px;
+    font-size: larger;
+}
+
+#servicios {
+    background-image: url(img/services_bar.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.cont_serv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: beige;
+    text-align: center;
+}
+
+.servicios1, .servicios2, .servicios3, .servicios4 {
+    width: 15%;
+    padding: 1%;
+}
+
+.servicios1 img, .servicios2 img, .servicios3 img, .servicios4 img {
+    width: 100%;
+}
+
+#proyectos {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    padding: 5%;
+}
+
+.cont_proy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.proyectos1, .proyectos2, .proyectos3, .proyectos4, .proyectos5, .proyectos6, .proyectos7, .proyectos8 {
+    align-content: center;
+    width: 25%;
+}
+
+.proyectos1 img, .proyectos2 img, .proyectos3 img, .proyectos4 img, .proyectos5 img, .proyectos6 img, .proyectos7 img, .proyectos8 img {
+    width: 100%;
+}
+
+footer {
+    background-image: url(img/sayukiit_bannerfinal.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px;
+    text-align: center;
+    height: auto;
+}
+
+.redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.fa-brands {
+    font-size: 25px;
+    margin: 10px;
+    color: #fff;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .mos-menu,
+    .hide-menu {
+        display: block;
+        right: 0;
+    }
+
+    .menu {
+        background: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        right: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 50px 0;
+        z-index: 100;
+        transition: right 0.3s ease;
+    }
+
+    .menu a {
+        display: block;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hide-menu {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #check:checked ~ .menu {
+        right: 0;
+    }
+
+    .servicios1, .servicios2, .servicios3, .servicios4 {
+        width: 15%;
+    }
+
+    .proyectos1, .proyectos2, .proyectos3, .proyectos4, .proyectos5, .proyectos6, .proyectos7, .proyectos8 {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .swiper {
+        padding: 20px;
+        height: 420px;
+    }
+
+    .servicios1, .servicios2, .servicios3, .servicios4 {
+        width: 100%;
+    }
+
+    .proyectos1, .proyectos2, .proyectos3, .proyectos4, .proyectos5, .proyectos6, .proyectos7, .proyectos8 {
+        width: 100%;
+    }
+
+    .yt-info {
+        text-align: center;
+    }
+
+    .yt-video-wrapper {
+        min-height: 200px;
+        width: 100%;
+    }
+}

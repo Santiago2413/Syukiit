@@ -159,7 +159,15 @@
  	 		},
 		  },
 		);
-		
+
+		const nav = document.querySelector('nav');
+		const toggleMenuState = () => {
+			if (!nav) return;
+			nav.classList.toggle('scrolled', window.scrollY > 20);
+		};
+
+		toggleMenuState();
+		window.addEventListener('scroll', toggleMenuState);
 	  </script>
 	<!-- ------------------------------------------------------ -->
 	<footer>
