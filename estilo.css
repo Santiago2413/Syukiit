@@ -22,9 +22,16 @@ html {
 
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: var(--bg-dark);
   color: var(--text-light);
   font-family: "Roboto", sans-serif;
+}
+
+main {
+  flex: 1;
 }
 
 a {
@@ -161,11 +168,10 @@ h1 {
 
 .yt-featured-banner {
   width: min(85%, 1100px);
-  margin: 40px auto 0;
+  margin: 40px, 40px;
   background: rgba(15, 15, 15, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
-  padding: 25px;
+  /*padding: 25px;*/
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(8px);
 }
@@ -368,7 +374,8 @@ h1 {
 .project-filter {
   background: #f1e5d7;
   color: #3d1a1a;
-  border: none;
+  border: 1px solid rgba(61, 26, 26, 0.35);
+  border-radius: 999px;
   padding: 12px 22px;
   font-weight: 700;
   text-transform: uppercase;
@@ -380,6 +387,7 @@ h1 {
 .project-filter.active {
   background: #863030;
   color: #fff;
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .project-gallery {
@@ -421,28 +429,94 @@ h1 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 50px 20px;
+  padding: 28px 30px 18px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-logo {
+  padding: 0 20px;
 }
 
 .site-footer img {
-  margin: 0 auto 20px;
-  max-height: 350px;
+  margin: 0 auto;
+  max-height: 310px;
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.18));
 }
 
-.redes {
+.footer-bar {
+  width: min(100%, 1280px);
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 28px;
+  background: linear-gradient(135deg, rgba(1, 9, 22, 0.404), rgba(29, 39, 52, 0.72));
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(4px);
+}
+
+.footer-bar p {
+  margin: 0;
+  color: #f5f7fb;
+  font-size: 0.93rem;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
 }
 
-.redes i,
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.footer-socials i,
 .fa-brands,
 .fa {
-  font-size: 25px;
+  font-size: 1.08rem;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 22px 12px 14px;
+  }
+
+  .footer-bar {
+    flex-direction: column;
+    padding: 16px 18px;
+    border-radius: 14px;
+  }
+
+  .footer-bar p {
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
