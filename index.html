@@ -138,6 +138,35 @@ to create works full of life and color</li>
       </section>
     </main>
 
+    <section id="contact" class="contact-section">
+      <div class="contact-shell">
+        <div class="contact-copy">
+          <p class="contact-kicker">Contacto</p>
+          <h2>Hablemos de tu próximo proyecto</h2>
+          <p>Si buscas ilustración, animación, diseño o desarrollo visual, escribe y te responderé pronto.</p>
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="field-group">
+            <label for="contact-name">Nombre</label>
+            <input id="contact-name" name="name" type="text" placeholder="Tu nombre" required>
+          </div>
+
+          <div class="field-group">
+            <label for="contact-email">Correo electrónico</label>
+            <input id="contact-email" name="email" type="email" placeholder="tucorreo@email.com" required>
+          </div>
+
+          <div class="field-group">
+            <label for="contact-message">Mensaje</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="Cuéntame sobre tu idea o proyecto" required></textarea>
+          </div>
+
+          <button type="submit" class="contact-submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+
     <footer id="redes" class="site-footer">
       <div class="footer-logo">
         <img src="img/sayukiit_logo.png" alt="Logo Sayukiit">
@@ -187,6 +216,37 @@ to create works full of life and color</li>
 
       toggleMenuState();
       window.addEventListener('scroll', toggleMenuState);
+
+      const contactForm = document.getElementById('contactForm');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+
+          const name = document.getElementById('contact-name').value.trim();
+          const email = document.getElementById('contact-email').value.trim();
+          const message = document.getElementById('contact-message').value.trim();
+
+          if (!name || !email || !message) {
+            alert('Por favor completa tu nombre, correo y mensaje antes de enviar.');
+            return;
+          }
+
+          const recipient = 'syukiicontactos@gmail.com';
+          const subject = `Nuevo mensaje de contacto desde la web de ${name}`;
+          const body = [
+            'Nombre: ' + name,
+            'Correo: ' + email,
+            '',
+            'Mensaje:',
+            message
+          ].join('\n');
+
+          const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          window.location.href = mailtoLink;
+          contactForm.reset();
+        });
+      }
     </script>
   </body>
 </html>
