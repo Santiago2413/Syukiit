@@ -3,10 +3,63 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sayukiit</title>
-    <link rel="icon" href="img/yukicon3.jpg">
+    <title>Sayukiit | Ilustración y diseño</title>
+
+    <!-- Metadata base -->
+    <meta name="description" content="Portafolio de Sayukiit (Yukii): ilustración digital y tradicional, animación 2D/3D y diseño gráfico. Proyectos, proceso creativo y contacto.">
+    <meta name="author" content="Sayukiit">
+    <meta name="theme-color" content="#863030">
+    <link rel="canonical" href="https://santiago2413.github.io/Syukiit/">
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn, Discord…) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sayukiit">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Sayukiit | Ilustración, animación 2D/3D y diseño gráfico">
+    <meta property="og:description" content="Portafolio de Sayukiit (Yukii): ilustración digital y tradicional, animación 2D/3D y diseño gráfico. Proyectos, proceso creativo y contacto.">
+    <meta property="og:url" content="https://santiago2413.github.io/Syukiit/">
+    <meta property="og:image" content="https://santiago2413.github.io/Syukiit/img/og-sayukiit.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilustración de portada del portafolio de Sayukiit">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sayukiit | Ilustración, animación 2D/3D y diseño gráfico">
+    <meta name="twitter:description" content="Portafolio de Sayukiit (Yukii): ilustración digital y tradicional, animación 2D y 3D y diseño gráfico.">
+    <meta name="twitter:image" content="https://santiago2413.github.io/Syukiit/img/og-sayukiit.jpg">
+
+    <!-- Iconos -->
+    <link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+
+    <!-- Datos estructurados -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sayukiit",
+        "alternateName": "Yukii",
+        "url": "https://santiago2413.github.io/Syukiit/",
+        "image": "https://santiago2413.github.io/Syukiit/img/yukicon3.jpg",
+        "jobTitle": "Artista digital, animador 2D/3D y diseñador gráfico",
+        "description": "Portafolio de ilustración, animación 2D y 3D y diseño gráfico de Sayukiit (Yukii).",
+        "knowsAbout": ["Ilustración digital", "Animación 2D", "Animación 3D", "Diseño gráfico"],
+        "sameAs": [
+          "https://www.instagram.com/sayukiit/",
+          "https://www.youtube.com/@sayukiit",
+          "https://x.com/sayukiit_24",
+          "https://www.behance.net/syukiit",
+          "https://www.tiktok.com/@sayukiit"
+        ]
+      }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -90,7 +143,7 @@ to create works full of life and color</li>
       <div class="yt-featured-banner">
         <div class="yt-content">
           <div class="yt-video-wrapper">
-            <iframe src="https://www.youtube.com/embed/rhbFWE4idHI?si=NEuP9lQ5Q60zVqEo" title="Último video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/rhbFWE4idHI?si=NEuP9lQ5Q60zVqEo" title="Último video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="yt-info">
             <h2></i> Mi canal de YouTube</h2>
@@ -126,7 +179,12 @@ to create works full of life and color</li>
           <div class="proyectos6"><img src="img/sayukiit_bea.png" alt="Proyecto Bea"></div>
           <div class="proyectos7"><img src="img/sayukiit_shower.png" alt="Proyecto Shower"></div>
           <div class="proyectos8"><img src="img/sayukiit_street.png" alt="Proyecto Street"></div>
-          <div class="proyectos9"><iframe src="Tablet Version 11 - Sayukiit.mp4" frameborder="0" allowfullscreen></iframe></div>
+          <div class="proyectos9">
+            <video class="project-video" controls preload="none" playsinline width="1920" height="1200" poster="img/tablet-version-11-poster.jpg">
+              <source src="img/tablet-version-11.mp4" type="video/mp4">
+              Tu navegador no admite vídeo HTML5. <a href="img/tablet-version-11.mp4">Descarga el vídeo</a>.
+            </video>
+          </div>
         </div>
 
         <div class="project-gallery" data-gallery="code">
